@@ -1,37 +1,14 @@
- Network_Training_Labs
-
+Network_Training_Labs
 This repository includes the configurations and setups I worked on during my network training  
 It covers Cisco switch labs Cisco ASA firewall configurations and a Mikrotik router setup  
 
- Repository_Structure
+Repository_Structure
 - Switch/  VLANs port security trunking and DHCP snooping  
 - Firewall/  ASA firewall full running configuration and step by step setup  
 - MikroTik/  Screenshot of my Mikrotik router configuration  
 
- Devices_and_Tools
-- Cisco Catalyst Switch IOS  
-- Cisco ASA 5506 Firewall ASA OS 9.8  
-- Mikrotik RouterOS
-- Putty
-  
 
- # Network_Training_Labs
-
-This repository includes the configurations and setups I worked on during my network training.  
-It covers **Cisco switch labs**, **Cisco ASA firewall configurations**, and a **Mikrotik router setup**.
-
----
-
-## Repository Structure
-
-- **Switch/** – VLANs, port security, trunking, DHCP snooping, ARP inspection, SSH management  
-- **Firewall/** – ASA firewall full running configuration, NAT, ACLs, DHCP pools, protocol inspection  
-- **MikroTik/** – Screenshot of Mikrotik router configuration, dual WAN failover  
-
----
-
-## Devices and Tools
-
+Devices and Tools
 - Cisco Catalyst Switch (IOS)  
 - Cisco ASA 5506 Firewall (ASA OS 9.8)  
 - Mikrotik Router (RouterOS)  
@@ -40,7 +17,7 @@ It covers **Cisco switch labs**, **Cisco ASA firewall configurations**, and a **
 
 -What I Configured
 
- Switch Configuration
+Switch Configuration
 - Hostname set (`rayan`) with local admin user and enable secret  
 - VLANs 10 (Sales) and 20 (Marketing) with inter-VLAN separation  
 - Port security on access ports (FastEthernet0/1, 0/2)  
