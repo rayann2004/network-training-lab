@@ -20,8 +20,8 @@ It covers Cisco switch labs Cisco ASA firewall configurations and a Mikrotik rou
 - Port security and DHCP snooping on switch ports  
 - ASA firewall interfaces inside outside DMZ  
 - Access lists and NAT rules  
-- DHCP server setup on the firewall  
--Mikrotik dual WAN setup with failover using two modems
+- DHCP server setup on the firewall
+- Mikrotik dual WAN setup with failover using two modems
 
 
 
