@@ -1,0 +1,59 @@
+ex# switch configuration
+hostname rayan
+
+! Enable secret for privileged exec access
+enable secret rayan 1882045
+username admin privilege 15 secret 1882045
+
+vlan 10
+ name Sales
+
+vlan 20
+ name Marketing
+
+interface Vlan1
+ ip address 192.168.1.10 255.255.255.0
+ no shutdown
+ip default-gateway 192.168.1.1
+
+no ip http server
+ip http secure-server
+ip ssh version 2
+line vty 0 15
+ transport input ssh
+ login local
+
+interface FastEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+ spanning-tree portfast
+
+interface FastEthernet0/2
+ switchport mode access
+ switchport access vlan 20
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+ spanning-tree portfast
+
+interface GigabitEthernet0/1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+spanning-tree mode rapid-pvst
+
+interface FastEthernet0/1
+ mls qos trust cos
+interface FastEthernet0/2
+ mls qos trust cos
+
+ip dhcp snooping
+ip dhcp snooping vlan 10,20
+ip arp inspection vlan 10,20
+end
+write memory
